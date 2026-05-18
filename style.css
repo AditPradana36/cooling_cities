@@ -436,6 +436,26 @@ figcaption {
   font-size: 14.5px;
 }
 
+.news-item--with-image {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.news-image {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
 .news-list li:last-child { border-bottom: 1px solid var(--rule); }
 
 .news-list .date {
