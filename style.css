@@ -428,14 +428,17 @@ figcaption {
 .news-list { list-style: none; }
 
 .news-list li {
-  padding: 14px 0;
-  border-top: 1px solid var(--rule);
   display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 24px;
-  font-size: 14.5px;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: start;
 }
-
+.news-item--image-top .news-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
 .news-item--with-image {
   display: flex;
   gap: 1rem;
@@ -443,13 +446,15 @@ figcaption {
 }
 
 .news-image {
-  width: 140px;
-  height: auto;
-  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
   object-fit: cover;
-  flex-shrink: 0;
 }
-
+.date {
+  font-weight: 600;
+  white-space: nowrap;
+}
 .news-content {
   display: flex;
   flex-direction: column;
