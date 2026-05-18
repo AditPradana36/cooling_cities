@@ -357,6 +357,10 @@ figcaption {
   border-radius: 2px;
 }
 
+.output-status.published {
+  background: #c6f8ff;
+  color: #285a60;
+}
 .output-status.accepted {
   background: #e2ebd9;
   color: #3a5a2c;
