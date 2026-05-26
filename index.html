@@ -6,6 +6,27 @@
 <title>Cooling Cities, Warming Communities — Research Project</title>
 <meta name="description" content="A research project quantifying climate resilience in Jakarta's urban parks through anthropomorphic mapping, satellite remote sensing, and place attachment surveys.">
 <link rel="stylesheet" href="style.css">
+<style>
+  .member-links { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .member-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    color: var(--ink-mute, #555);
+    border: 1px solid var(--rule, rgba(0,0,0,0.12));
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    text-decoration: none;
+  }
+  .member-link-icon:hover {
+    color: var(--ink, #111);
+    border-color: var(--ink-mute, #555);
+    background: var(--bg-subtle, rgba(0,0,0,0.04));
+  }
+  .member-link-icon svg { width: 15px; height: 15px; display: block; flex-shrink: 0; }
+</style>
 </head>
 <body>
 
@@ -14,14 +35,14 @@
   <div class="topbar-inner">
     <a href="#home" class="brand-mark">Cooling Cities, Warming Communities</a>
     <nav id="primary-nav">
-      <a href="#home" data-target="home">Home</a>
-      <a href="#about" data-target="about">About</a>
+      <a href="#home"    data-target="home">Home</a>
+      <a href="#about"   data-target="about">About</a>
       <a href="#outputs" data-target="outputs">Outputs</a>
-      <a href="#data" data-target="data">Data</a>
+      <a href="#data"    data-target="data">Data</a>
       <a href="#related" data-target="related">Related</a>
       <a href="#funding" data-target="funding">Funding</a>
-      <a href="#news" data-target="news">News</a>
-      <a href="#team" data-target="team">Team</a>
+      <a href="#news"    data-target="news">News</a>
+      <a href="#team"    data-target="team">Team</a>
     </nav>
   </div>
 </div>
@@ -37,6 +58,7 @@
 </section>
 
 <!-- ============ ABOUT ============ -->
+<!-- Content rendered from data/about.js -->
 <section id="about">
   <div class="container container--narrow">
     <div class="section-header">
@@ -44,53 +66,19 @@
       <h2>🌿 About the project</h2>
       <p class="section-subtitle">Building a Climate-Resilient Urban Ecosystem Index for Jakarta's parks, integrating ecological, environmental, and human dimensions.</p>
     </div>
-
     <h3>Motivation</h3>
-    <div class="prose">
-      <p>
-        Urban ecosystems face mounting pressure from climate change. Green open spaces play a central role in strengthening urban resilience — they buffer the heat, support ecosystem services, and create the everyday environments where people form bonds with their city. Yet across many urban areas, parks are declining or carved from leftover land, often managed without a clear understanding of what makes a green space <em>actually</em> resilient and meaningful.
-      </p>
-      <p>
-        This project addresses that gap by developing a <strong>Climate-Resilient Urban Ecosystem Index</strong> that integrates three complementary dimensions of urban park performance: how green a space looks from a human, street-level vantage point; how effectively it moderates its surrounding environment; and how strongly people are attached to it. Applied to Jakarta's urban parks, the index offers planners and communities a holistic, data-driven tool for assessing and enhancing climate resilience through green infrastructure.
-      </p>
-    </div>
-
+    <div class="prose" id="about-motivation"></div>
     <h3>Three core indicators</h3>
-    <div class="index-grid">
-      <div class="index-card">
-        <h4>Human Perception through Street-Level Imagery</h4>
-        <p>An <em>anthropomorphic mapping</em> approach that quantifies how much vegetation a person actually sees from the street. Using 360° panoramas and deep-learning segmentation, it captures the lived, eye-level experience of urban greenery — asking <em>"how green does this place look and feel?"</em></p>
-      </div>
-      <div class="index-card">
-        <h4>Greenspace Cool Island Intensity</h4>
-        <p>An <em>ecological performance</em> dimension that captures the buffering capacity of a green space relative to its built surroundings — reflecting how effectively a park moderates ambient conditions and anchors climate resilience at the neighbourhood scale.</p>
-      </div>
-      <div class="index-card">
-        <h4>Place Attachment</h4>
-        <p>An <em>anthropogenic</em> dimension measuring the symbolic and functional bonds people form with a green space — encompassing <strong>place identity</strong> (affective connection) and <strong>place dependence</strong> (functional reliance). Strong attachment signals a resilient, people-centred urban ecosystem.</p>
-      </div>
-    </div>
-
+    <div class="index-grid" id="about-indicators"></div>
     <h3>Methodology in brief</h3>
-    <div class="prose">
-      <p>
-        We combine three methodological pillars. <strong>Anthropomorphic mapping</strong> uses Google Street View panoramas and deep-learning models pre-trained on ADE20K to perform pixel-level segmentation, yielding a per-point measure of eye-level vegetation coverage. <strong>Satellite remote sensing</strong> draws on imagery to characterise the spatial relationship between green spaces and their surrounding built environment across multiple buffer configurations (fixed radius, turning point, equal area, equal radius). <strong>Field surveys</strong> in selected Jakarta parks measure place attachment through structured questionnaires, observations, and interviews, analysed via descriptive statistics and chi-square tests.
-      </p>
-      <p>
-        The three layers are then integrated through map overlay to produce the multi-dimensional Climate-Resilient Urban Ecosystem Index — a composite measure that captures ecological, visual, and spatial metrics alongside the human attachment dimension that makes a park more than its physical features.
-      </p>
-    </div>
-
+    <div class="prose" id="about-methodology"></div>
     <h3>Why street-view imagery</h3>
-    <div class="prose">
-      <p>
-        Remote sensing alone misses the ground-level experience. Street-view imagery sits at the core of this project because it records the city from a human point of view — the same scale at which residents move, rest, and form attachments. By combining street-view with satellite data and survey responses, the project bridges three perspectives that are usually studied separately: how a place <em>looks</em>, how it <em>performs</em> ecologically, and how it <em>feels</em> to the people who use it.
-      </p>
-    </div>
+    <div class="prose" id="about-streetview"></div>
   </div>
 </section>
 
 <!-- ============ OUTPUTS ============ -->
+<!-- Content rendered from data/outputs.js -->
 <section id="outputs">
   <div class="container container--narrow">
     <div class="section-header">
@@ -98,43 +86,7 @@
       <h2>📄 Publications &amp; outputs</h2>
       <p class="section-subtitle">Papers, conference contributions, and works-in-progress produced under the project.</p>
     </div>
-
-    <ul class="outputs-list">
-
-      <!-- Published -->
-      <li>
-        <span class="output-status published">Published</span>
-        <p class="output-title">
-          Indonesia's urban green spaces dilemma: balancing law, ecology, and public space, highlighting Jakarta
-        </p>
-        <p class="output-authors">Pradana, M.R. &amp; Semedi, J.M.</p>
-        <p class="output-venue">Human Geography</p> <a href="https://doi.org/10.1177/19427786261447854">[DOI]</a>
-      </li>
-
-      <!-- Submitted -->
-      <li>
-        <span class="output-status submitted">Submitted</span>
-        <p class="output-title">
-          Visualizing sustainable campuses: a spatiotemporal deep learning analysis of eye-level greenery
-        </p>
-        <p class="output-authors">
-          Semedi, J.M., Pradana, M.R., Permata, C.F., Pratama, R.A., Candra, M.A.N., Rahatiningtyas, N.S., Dimyati, M.
-        </p>
-        <p class="output-venue">6th International Conference on Smart City Innovation 2026</p>
-      </li>
-
-      <!-- In progress -->
-      <li>
-        <span class="output-status progress">In Development</span>
-        <p class="output-title">
-          [Core Paper]
-        </p>
-        <p class="output-authors">Authors to be confirmed.</p>
-        <p class="output-venue">Core paper of the project — currently in development.</p>
-      </li>
-
-    </ul>
-
+    <ul class="outputs-list" id="outputs-list"></ul>
     <p class="prose" style="margin-top: 28px; font-size: 14px; color: var(--ink-mute);">
       DOIs, preprint links, and full citations will be added as outputs progress.
     </p>
@@ -142,6 +94,7 @@
 </section>
 
 <!-- ============ DATA ============ -->
+<!-- Content rendered from data/data-section.js -->
 <section id="data">
   <div class="container container--narrow">
     <div class="section-header">
@@ -149,19 +102,7 @@
       <h2>📊 Data &amp; instruments</h2>
       <p class="section-subtitle">Survey instruments, perception datasets, and street-view-derived indicators developed under the project.</p>
     </div>
-
-    <div class="data-block">
-      <div class="data-meta">Survey · 200+ images · 200+ respondents · upcoming release</div>
-      <h3>Aesthetics, Naturalness &amp; Shading (ANS) Survey</h3>
-      <p>
-        A core data product of the project is a dataset of <strong>Aesthetics, Naturalness, and Shading (ANS)</strong> perception ratings for over 200 Jakarta street-view images, collected from 200+ respondents. The survey is delivered via the SP-Survey platform developed by Yang et al. (2025), with each image scored across the three perception dimensions. The resulting dataset provides a human-perception ground truth for the project&#x2019;s anthropomorphic mapping outputs &#x2014; enabling direct comparison between segmentation-derived measures and lived perception of urban green spaces.
-      </p>
-      <div class="dl-links">
-        <a href="#" class="secondary" aria-disabled="true" style="pointer-events:none; opacity:0.45; cursor:not-allowed;">Dataset (coming soon)</a>
-        <a href="https://ans-survey-1.vercel.app/survey" target="_blank" rel="noopener">View survey &#x2192;</a>
-      </div>
-    </div>
-
+    <div id="datasets-list"></div>
     <p class="prose" style="margin-top: 24px; font-size: 14px; color: var(--ink-mute);">
       Additional datasets will be released through Zenodo or HuggingFace as the project progresses.
     </p>
@@ -169,6 +110,7 @@
 </section>
 
 <!-- ============ RELATED ============ -->
+<!-- Content rendered from data/related.js -->
 <section id="related">
   <div class="container container--narrow">
     <div class="section-header">
@@ -176,53 +118,12 @@
       <h2>🗺️ Related work</h2>
       <p class="section-subtitle">Adjacent analyses and pilot studies that demonstrate the project's methodology in practice.</p>
     </div>
-
-    <h3>Temporal greenness change at Universitas Indonesia, 2015–2025</h3>
-    <div class="prose">
-      <p>
-        As a methodological pilot for the Green View Index pipeline, we conducted a temporal study of the Universitas Indonesia campus, comparing Google Street View panoramas from 2015 and 2025. Each panorama is segmented and the proportion of green pixels (vegetation) is computed and mapped back to its sampling point along the campus road network. The resulting greenness layer reveals where vegetation cover has been preserved, gained, or lost over the decade — a real-world demonstration of the same anthropomorphic mapping workflow that underpins the project's main analysis.
-      </p>
-      <p>
-        The street-view panoramas and greenness maps shown below are directly related to the submitted paper: <em>Visualizing sustainable campuses: a spatiotemporal deep learning analysis of eye-level greenery</em> (Semedi et al., 6th International Conference on Smart City Innovation 2026).
-      </p>
-    </div>
-
-    <figure>
-      <div class="frame">
-        <img src="images/panorama_overlay_2015.png" alt="Segmented panorama overlay of a Universitas Indonesia road in 2015, with vegetation, road, and built structures highlighted.">
-      </div>
-      <figcaption>
-        Example panorama segmentation overlay (2015). Green areas mark vegetation, with road, sky, and built structures shown in their respective semantic categories.
-      </figcaption>
-    </figure>
-
-    <figure>
-      <div class="frame">
-        <img src="images/panorama_overlay_2025.png" alt="Segmented panorama overlay of the same Universitas Indonesia road in 2025.">
-      </div>
-      <figcaption>
-        The same location in 2025. Comparing the two panoramas reveals visible shifts in canopy cover, road surface, and roadside infrastructure.
-      </figcaption>
-    </figure>
-
-    <div class="figure-pair-greenness">
-      <figure>
-        <div class="frame">
-          <img src="images/greenness_2015.png" alt="Map of campus greenness percentage by sampling point, 2015.">
-        </div>
-        <figcaption>Greenness percentage by sampling point, 2015.</figcaption>
-      </figure>
-      <figure>
-        <div class="frame">
-          <img src="images/greenness_2025.png" alt="Map of campus greenness percentage by sampling point, 2025.">
-        </div>
-        <figcaption>Greenness percentage by sampling point, 2025.</figcaption>
-      </figure>
-    </div>
+    <div id="related-list"></div>
   </div>
 </section>
 
 <!-- ============ FUNDING ============ -->
+<!-- Content rendered from data/funding.js -->
 <section id="funding">
   <div class="container container--narrow">
     <div class="section-header">
@@ -230,17 +131,8 @@
       <h2>🏛️ Funding</h2>
       <p class="section-subtitle">Grants supporting the Cooling Cities, Warming Communities project.</p>
     </div>
-
     <p class="prose" style="margin-bottom: 8px;">This research is supported by the following grant.</p>
-
-    <ul class="grants-list">
-      <li>
-        <div class="grant-title">PUTI Q2 2025 — Cooling Cities, Warming Communities</div>
-        <div class="grant-funder">Universitas Indonesia · PUTI Q2 Scheme</div>
-        <div class="grant-meta">Effective: 22 May 2025 → 30 November 2027</div>
-      </li>
-    </ul>
-
+    <ul class="grants-list" id="funding-list"></ul>
     <p class="prose" style="margin-top: 24px; font-size: 14px; color: var(--ink-mute);">
       Additional funding sources will be listed as the project progresses.
     </p>
@@ -248,6 +140,7 @@
 </section>
 
 <!-- ============ NEWS ============ -->
+<!-- Content rendered from data/news.js -->
 <section id="news">
   <div class="container container--narrow">
     <div class="section-header">
@@ -255,59 +148,15 @@
       <h2>📰 News &amp; updates</h2>
       <p class="section-subtitle">Project announcements, talks, dataset releases, and publications.</p>
     </div>
-
-    <!--
-      ============ HOW TO ADD A NEWS ITEM ============
-      Copy the template below inside the <ul class="news-list"> tag,
-      filling in the date and content. Newest entries go at the top.
-
-        <li>
-          <span class="date">DD Month YYYY</span>
-          <span>Your news item content here. You can include <a href="#">links</a> as needed.</span>
-        </li>
-
-      Remove the .news-empty block once you have at least one entry.
-    ================================================
-    -->
-
-    <ul class="news-list">
-      <li>
-        <span class="date">16 May 2026</span>
-        <span>
-          Our paper has been published:
-          <em>Indonesia's urban green spaces dilemma: balancing law, ecology, and public space, highlighting Jakarta</em>
-          by M.R. Pradana &amp; J.M. Semedi in <em>Human Geography</em>.
-          <a href="https://doi.org/10.1177/19427786261447854" target="_blank" rel="noopener noreferrer">[DOI]</a>
-        </span>
-      </li>
-
-      <li class="news-item news-item--image-top">
-        <span class="date">12 May 2026</span>
-
-        <div class="news-body">
-          <img
-            src="images/conf_12052026.jpeg"
-            alt="Presentation at the 6th International Conference on Smart City Innovation 2026"
-            class="news-image"
-          />
-
-          <span>
-            Our research titled
-            <em>Visualizing sustainable campuses: a spatiotemporal deep learning analysis of eye-level greenery</em>
-            was presented at the 6th International Conference on Smart City Innovation 2026 by Jarot Mulyo Semedi, M.Sc.
-            Authors: J.M. Semedi, M.R. Pradana, C.F. Permata, R.A. Pratama, M.A.N. Candra, N.S. Rahatiningtyas, and M. Dimyati.
-          </span>
-        </div>
-      </li>
-    </ul>
-
-    <div class="news-empty">
+    <ul class="news-list" id="news-list"></ul>
+    <div class="news-empty" id="news-empty">
       No news yet. Updates will be posted here as the project progresses.
     </div>
   </div>
 </section>
 
 <!-- ============ TEAM ============ -->
+<!-- Content rendered from data/team.js -->
 <section id="team" class="team-section">
   <div class="container container--narrow">
     <div class="section-header">
@@ -315,133 +164,10 @@
       <h2>👥 Team &amp; collaborators</h2>
       <p class="section-subtitle">The researchers behind the project. For inquiries, dataset access, or collaboration proposals, please get in touch.</p>
     </div>
-
-    <!--
-      ============ HOW TO EDIT TEAM MEMBERS ============
-
-      Each team member is a .member-card block. To add a contact link
-      (Email, ORCID, Scopus, GitHub, LinkedIn, personal site, etc.),
-      add an <a> inside the .member-links container.
-
-      Pattern (copy any of these inside .member-links):
-        <a href="mailto:user@example.org">Email</a>
-        <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://www.scopus.com/authid/detail.uri?authorId=XXXXXXXXX" target="_blank" rel="noopener">Scopus</a>
-        <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/USERNAME/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://your-site.com" target="_blank" rel="noopener">Site</a>
-
-      Empty .member-links containers currently show "(contacts to be added)".
-      Once you add at least one <a>, remove the <span class="pending">…</span>
-      placeholder line.
-
-      To use a real photo instead of initials, replace
-        <div class="member-avatar">XX</div>
-      with
-        <img src="images/photo-name.jpg" alt="Name" class="member-avatar"
-        style="object-fit: cover;">
-      ====================================================
-    -->
-
-    <!-- ===== Principal investigator + co-investigators ===== -->
     <div class="group-label">Principal investigator &amp; co-investigators</div>
-    <div class="team-grid">
-
-      <div class="member-card">
-        <img src="images/photo-jarot.jpg" alt="Jarot Mulyo Semedi" class="member-avatar" style="object-fit: cover;">
-        <div>
-          <p class="member-name">Jarot Mulyo Semedi, M.Sc.</p>
-          <p class="member-role">Principal Investigator</p>
-          <p class="member-affiliation">PhD student and lecturer, Department of Geography, Universitas Indonesia &middot; Spatial Modeling Research Group</p>
-          <div class="member-links">
-            <span class="pending">(contacts to be added)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <img src="images/photo-nurul.jpg" alt="Nurul Sri Rahatiningtyas" class="member-avatar" style="object-fit: cover;">
-        <div>
-          <p class="member-name">Nurul Sri Rahatiningtyas, M.Si.</p>
-          <p class="member-role">Co-Investigator</p>
-          <p class="member-affiliation">PhD student, Martin Luther University of Halle-Wittenberg &middot; Lecturer, Department of Geography, Universitas Indonesia</p>
-          <div class="member-links">
-            <span class="pending">(contacts to be added)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <img src="images/radit.jpg" alt="Mohammad Raditia Pradana" class="member-avatar" style="object-fit: cover;">
-        <div>
-          <p class="member-name">Mohammad Raditia Pradana, M.Si.</p>
-          <p class="member-role">Co-Investigator</p>
-          <p class="member-affiliation">Researcher, Universitas Indonesia</p>
-          <div class="member-links">
-            <a href="mailto:mohammad.raditia03@ui.ac.id">Email</a>
-            <a href="https://aditpradana36.github.io/" target="_blank" rel="noopener">Site</a>
-            <a href="https://orcid.org/0009-0005-8836-6801" target="_blank" rel="noopener">ORCID</a>
-            <a href="https://www.linkedin.com/in/mohammadraditia/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/AditPradana36" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ===== Research assistants ===== -->
+    <div class="team-grid" id="team-investigators"></div>
     <div class="group-label">Research assistants</div>
-    <div class="team-grid team-grid--ras">
-
-      <div class="member-card">
-        <img src="images/photo-maria.jpg" alt="Maria Andriana Nea Candra" class="member-avatar" style="object-fit: cover;">
-        <div>
-          <p class="member-name">Maria Andriana Nea Candra</p>
-          <p class="member-role">Research Assistant · Undergraduate</p>
-          <p class="member-affiliation">Department of Geography, Universitas Indonesia</p>
-          <p class="member-thesis">
-            <span class="thesis-label">Undergraduate thesis</span>
-            The relationship between urban park characteristics in South Jakarta and visitors' place attachment.
-          </p>
-          <div class="member-links">
-            <span class="pending">(contacts to be added)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <img src="images/photo-roddy.jpg" alt="Roddy Aprilian Pratama" class="member-avatar" style="object-fit: cover;">
-        <div>
-          <p class="member-name">Roddy Aprilian Pratama</p>
-          <p class="member-role">Research Assistant · Undergraduate</p>
-          <p class="member-affiliation">Department of Geography, Universitas Indonesia</p>
-          <p class="member-thesis">
-            <span class="thesis-label">Undergraduate thesis</span>
-            Spatial variation of visual composition based on semantic segmentation and its relationship with environmental perception of urban parks in South Jakarta.
-          </p>
-          <div class="member-links">
-            <span class="pending">(contacts to be added)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <img src="images/photo-cheryl.jpg" alt="Cheryl Ferrarichka Permata" class="member-avatar" style="object-fit: cover;">
-        <div>
-          <p class="member-name">Cheryl Ferrarichka Permata</p>
-          <p class="member-role">Research Assistant · Undergraduate</p>
-          <p class="member-affiliation">Department of Geography, Universitas Indonesia</p>
-          <p class="member-thesis">
-            <span class="thesis-label">Undergraduate thesis</span>
-            Analysis of visual vegetation change in urban parks and human perception in 2013 and 2025 based on street-view imagery: a temporal study in South Jakarta.
-          </p>
-          <div class="member-links">
-            <span class="pending">(contacts to be added)</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <div class="team-grid team-grid--ras" id="team-assistants"></div>
   </div>
 </section>
 
@@ -453,31 +179,247 @@
   </div>
 </footer>
 
-<!-- ============ SCROLLSPY ============ -->
+<!-- ============ DATA FILES ============ -->
+<script src="data/about.js"></script>
+<script src="data/outputs.js"></script>
+<script src="data/data-section.js"></script>
+<script src="data/related.js"></script>
+<script src="data/funding.js"></script>
+<script src="data/news.js"></script>
+<script src="data/team.js"></script>
+
+<!-- ============ RENDER + SCROLLSPY ============ -->
 <script>
   (function () {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('#primary-nav a[data-target]');
+
+    // ── About ────────────────────────────────────────
+    (function () {
+      if (typeof ABOUT === 'undefined') return;
+
+      function paragraphs(arr) {
+        return arr.map(function (p) { return '<p>' + p + '</p>'; }).join('');
+      }
+
+      var mot = document.getElementById('about-motivation');
+      if (mot) mot.innerHTML = paragraphs(ABOUT.motivation);
+
+      var ind = document.getElementById('about-indicators');
+      if (ind && ABOUT.indicators) {
+        ind.innerHTML = ABOUT.indicators.map(function (c) {
+          return '<div class="index-card">'
+            + '<h4>' + c.title + '</h4>'
+            + '<p>' + c.text + '</p>'
+            + '</div>';
+        }).join('');
+      }
+
+      var meth = document.getElementById('about-methodology');
+      if (meth) meth.innerHTML = paragraphs(ABOUT.methodology);
+
+      var sv = document.getElementById('about-streetview');
+      if (sv) sv.innerHTML = paragraphs(ABOUT.streetview);
+    })();
+
+    // ── Outputs ──────────────────────────────────────
+    (function () {
+      var list = document.getElementById('outputs-list');
+      if (!list || typeof OUTPUTS === 'undefined') return;
+      list.innerHTML = OUTPUTS.map(function (o) {
+        var label = o.status === 'published' ? 'Published'
+                  : o.status === 'submitted' ? 'Submitted'
+                  : 'In Development';
+        var doi = o.doi ? ' <a href="' + o.doi + '" target="_blank" rel="noopener">[DOI]</a>' : '';
+        return '<li>'
+          + '<span class="output-status ' + o.status + '">' + label + '</span>'
+          + '<p class="output-title">' + o.title + '</p>'
+          + '<p class="output-authors">' + o.authors + '</p>'
+          + '<p class="output-venue">' + o.venue + doi + '</p>'
+          + '</li>';
+      }).join('');
+    })();
+
+    // ── Data & instruments ───────────────────────────
+    (function () {
+      var container = document.getElementById('datasets-list');
+      if (!container || typeof DATASETS === 'undefined') return;
+      container.innerHTML = DATASETS.map(function (d) {
+        var links = d.links.map(function (l) {
+          var disabled = l.disabled
+            ? ' class="secondary" aria-disabled="true" style="pointer-events:none;opacity:0.45;cursor:not-allowed;"'
+            : '';
+          var target = l.disabled ? '' : ' target="_blank" rel="noopener"';
+          return '<a href="' + l.href + '"' + disabled + target + '>' + l.label + '</a>';
+        }).join('');
+        return '<div class="data-block">'
+          + '<div class="data-meta">' + d.meta + '</div>'
+          + '<h3>' + d.title + '</h3>'
+          + '<p>' + d.description + '</p>'
+          + '<div class="dl-links">' + links + '</div>'
+          + '</div>';
+      }).join('');
+    })();
+
+    // ── Related ───────────────────────────────────────
+    (function () {
+      var container = document.getElementById('related-list');
+      if (!container || typeof RELATED === 'undefined') return;
+
+      container.innerHTML = RELATED.map(function (study) {
+        var body = study.body.map(function (p) { return '<p>' + p + '</p>'; }).join('');
+
+        // Group paired figures
+        var figureGroups = [];
+        var pairMap = {};
+        study.figures.forEach(function (fig) {
+          if (fig.pair) {
+            if (!pairMap[fig.pair]) { pairMap[fig.pair] = []; }
+            pairMap[fig.pair].push(fig);
+          } else {
+            figureGroups.push([fig]);
+          }
+        });
+        Object.keys(pairMap).forEach(function (key) {
+          figureGroups.push(pairMap[key]);
+        });
+
+        var figuresHtml = figureGroups.map(function (group) {
+          var figs = group.map(function (fig) {
+            return '<figure>'
+              + '<div class="frame"><img src="' + fig.src + '" alt="' + fig.alt + '"></div>'
+              + '<figcaption>' + fig.caption + '</figcaption>'
+              + '</figure>';
+          }).join('');
+          return group.length > 1
+            ? '<div class="figure-pair-greenness">' + figs + '</div>'
+            : figs;
+        }).join('');
+
+        return '<h3>' + study.title + '</h3>'
+          + '<div class="prose">' + body + '</div>'
+          + figuresHtml;
+      }).join('');
+    })();
+
+    // ── Funding ───────────────────────────────────────
+    (function () {
+      var list = document.getElementById('funding-list');
+      if (!list || typeof FUNDING === 'undefined') return;
+      list.innerHTML = FUNDING.map(function (g) {
+        return '<li>'
+          + '<div class="grant-title">' + g.title + '</div>'
+          + '<div class="grant-funder">' + g.funder + '</div>'
+          + '<div class="grant-meta">Effective: ' + g.period + '</div>'
+          + '</li>';
+      }).join('');
+    })();
+
+    // ── News ─────────────────────────────────────────
+    (function () {
+      var list  = document.getElementById('news-list');
+      var empty = document.getElementById('news-empty');
+      if (!list || typeof NEWS === 'undefined') return;
+      if (!NEWS.length) { if (empty) empty.style.display = 'block'; return; }
+      if (empty) empty.style.display = 'none';
+      list.innerHTML = NEWS.map(function (item) {
+        if (item.image) {
+          return '<li class="news-item news-item--image-top">'
+            + '<span class="date">' + item.date + '</span>'
+            + '<div class="news-body">'
+            + '<img src="' + item.image + '" alt="' + (item.imageAlt || '') + '" class="news-image">'
+            + '<span>' + item.text + '</span>'
+            + '</div></li>';
+        }
+        return '<li>'
+          + '<span class="date">' + item.date + '</span>'
+          + '<span>' + item.text + '</span>'
+          + '</li>';
+      }).join('');
+    })();
+
+    // ── Team ─────────────────────────────────────────
+    (function () {
+      function initials(name) {
+        return name.split(' ')
+          .filter(function (w) { return /^[A-Z]/.test(w); })
+          .slice(0, 2)
+          .map(function (w) { return w[0]; })
+          .join('');
+      }
+      function card(person) {
+        var avatar = person.photo
+          ? '<img src="' + person.photo + '" alt="' + person.name + '" class="member-avatar" style="object-fit:cover;">'
+          : '<div class="member-avatar">' + initials(person.name) + '</div>';
+        var ICONS = {
+          /* Envelope — Heroicons outline (MIT) */
+          'Email':    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>',
+          /* Globe — Heroicons outline (MIT) */
+          'Site':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253M3.157 7.582A8.959 8.959 0 0 0 3 12c0 .778.099 1.533.284 2.253m0 0a8.964 8.964 0 0 0 3.097 4.498m0 0A8.997 8.997 0 0 0 12 21m-5.619-6.249A8.964 8.964 0 0 0 12 16.5c1.458 0 2.832-.346 4.042-.955m0 0a8.964 8.964 0 0 0 3.097-4.498"/></svg>',
+          /* ORCID — Simple Icons (CC0) exact brand path */
+          'ORCID':    '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>',
+          /* LinkedIn — Bootstrap Icons (MIT) exact brand path */
+          'LinkedIn': '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>',
+          /* GitHub — Simple Icons (CC0) exact brand path */
+          'GitHub':   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>',
+          /* Scopus — Simple Icons (CC0) exact brand path */
+          'Scopus':   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 19.059l-.14-1.777c-1.426.772-2.945 1.076-4.465 1.076-3.319 0-5.96-2.782-5.96-6.475 0-3.903 2.595-6.31 5.633-6.31 1.917 0 3.39.303 4.792 1.075L24 4.895c-1.286-.608-2.337-.889-4.698-.889-4.534 0-7.97 3.53-7.97 8.017 0 5.12 4.09 7.924 7.9 7.924 1.916 0 3.506-.257 4.768-.888zm-14.954-3.46c0-2.22-1.964-3.225-3.857-4.347C3.716 10.364 2.15 9.756 2.15 8.12c0-1.215.889-2.548 2.642-2.548 1.519 0 2.57.234 3.903 1.029l.117-1.847c-1.239-.514-2.127-.748-4.137-.748C1.8 4.006.047 5.876.047 8.26c0 2.384 2.103 3.413 4.02 4.581 1.426.865 2.922 1.45 2.922 2.992 0 1.496-1.333 2.571-2.922 2.571-1.566 0-2.594-.35-3.786-1.075L0 19.176c1.215.56 2.454.818 4.16.818 2.385 0 4.885-1.473 4.885-4.395z"/></svg>',
+          /* Google Scholar — Simple Icons (CC0) exact brand path */
+          'Google Scholar':  '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>',
+          /* ResearchGate — Simple Icons (CC0) exact brand path */
+          'ResearchGate':    '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/></svg>',
+        };
+          
+          var links = (person.links && person.links.length)
+          ? person.links.map(function (l) {
+              var ext = l.href.startsWith('mailto:') ? '' : ' target="_blank" rel="noopener"';
+              var icon = ICONS[l.label] || ICONS['Site'];
+              return '<a href="' + l.href + '"' + ext + ' class="member-link-icon" aria-label="' + l.label + '" title="' + l.label + '">' + icon + '</a>';
+            }).join('')
+          : '<span class="pending">(contacts to be added)</span>';
+        var thesis = person.thesis
+          ? '<p class="member-thesis"><span class="thesis-label">Undergraduate thesis</span>' + person.thesis + '</p>'
+          : '';
+        return '<div class="member-card">'
+          + avatar
+          + '<div>'
+          + '<p class="member-name">' + person.name + '</p>'
+          + '<p class="member-role">' + person.role + '</p>'
+          + '<p class="member-affiliation">' + person.affiliation + '</p>'
+          + thesis
+          + '<div class="member-links">' + links + '</div>'
+          + '</div></div>';
+      }
+      var piGrid = document.getElementById('team-investigators');
+      var raGrid = document.getElementById('team-assistants');
+      if (piGrid && typeof INVESTIGATORS !== 'undefined')
+        piGrid.innerHTML = INVESTIGATORS.map(card).join('');
+      if (raGrid && typeof ASSISTANTS !== 'undefined')
+        raGrid.innerHTML = ASSISTANTS.map(card).join('');
+    })();
+
+    // ── Scrollspy ─────────────────────────────────────
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('#primary-nav a[data-target]');
 
     function setActive(id) {
-      navLinks.forEach(a => {
+      navLinks.forEach(function (a) {
         if (a.dataset.target === id) a.classList.add('active');
         else a.classList.remove('active');
       });
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter(e => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    var observer = new IntersectionObserver(function (entries) {
+      var visible = entries
+        .filter(function (e) { return e.isIntersecting; })
+        .sort(function (a, b) { return b.intersectionRatio - a.intersectionRatio; })[0];
       if (visible) setActive(visible.target.id);
     }, {
       rootMargin: '-30% 0px -60% 0px',
       threshold: [0, 0.25, 0.5, 0.75, 1]
     });
 
-    sections.forEach(s => observer.observe(s));
+    sections.forEach(function (s) { observer.observe(s); });
     setActive('home');
+
   })();
 </script>
 
