@@ -26,8 +26,17 @@ const INVESTIGATORS = [
     name: "Jarot Mulyo Semedi, M.Sc.",
     role: "Principal Investigator",
     affiliation: "PhD student and lecturer, Department of Geography, Universitas Indonesia &middot; Spatial Modeling Research Group",
-    photo: "images/photo-jarot.jpg",
-    links: []
+    photo: "images/photo-jarot.jpeg",
+    links: [
+      { label: "Email",    href: "mailto:jarot.mulyo@ui.ac.id" },
+      { label: "Site",     href: "https://frontiers.ui.ac.id/sparc/researcher/jms-2/" },
+      { label: "Google Scholar",  href: "https://scholar.google.com/citations?user=CapZeTwAAAAJ" },
+      { label: "ResearchGate",    href: "https://www.researchgate.net/profile/Jarot-Mulyo-Semedi?ev=hdr_xprf" },
+      { label: "ORCID",   href: "https://orcid.org/0000-0003-3418-0997" },
+      { label: "LinkedIn", href: "https://id.linkedin.com/in/jarotsemedi" },
+      { label: "Scopus",     href: "https://www.scopus.com/authid/detail.uri?authorId=57192945611" },
+
+    ]
   },
 
   {
