@@ -99,7 +99,9 @@ const ASSISTANTS = [
     affiliation: "Department of Geography, Universitas Indonesia",
     photo: "images/photo-cheryl.jpg",
     thesis: "Analysis of visual vegetation change in urban parks and human perception in 2013 and 2025 based on street-view imagery: a temporal study in South Jakarta.",
-    links: []
+    links: [
+      {label: "Email",    href: "mailto:cherylferrarichka@gmail.com"}
+    ]
   },
 
 ];

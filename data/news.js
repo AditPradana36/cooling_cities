@@ -31,6 +31,15 @@
 const NEWS = [
 
   {
+    date: "9 July 2026",
+    text: `Our conference paper has been published: 
+    <em>Visualizing Sustainable Campuses: A Spatiotemporal Deep Learning Analysis of Eye-Level Greenery</em> 
+    by J.M. Semedi, M.R. Pradana, C.F. Permata, R.A. Pratama, M.A.N. Candra, N.S. Rahatiningtyas &amp; M. Dimyati 
+    in <em>IOP Conference Series: EES</em>. <a href="https://doi.org/10.1088/1755-1315/1648/1/012008" target="_blank" rel="noopener noreferrer">[DOI]</a>
+    <br>Go check it out!</br>`
+  },
+  
+  {
     date: "16 May 2026",
     text: `Our paper has been published: <em>Indonesia's urban green spaces dilemma: balancing law, ecology, and public space, highlighting Jakarta</em> by M.R. Pradana &amp; J.M. Semedi in <em>Human Geography</em>. <a href="https://doi.org/10.1177/19427786261447854" target="_blank" rel="noopener noreferrer">[DOI]</a>`
   },

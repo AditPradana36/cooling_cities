@@ -30,11 +30,11 @@ const OUTPUTS = [
   },
 
   {
-    status: "submitted",
+    status: "published",
     title: "Visualizing sustainable campuses: a spatiotemporal deep learning analysis of eye-level greenery",
     authors: "Semedi, J.M., Pradana, M.R., Permata, C.F., Pratama, R.A., Candra, M.A.N., Rahatiningtyas, N.S., Dimyati, M.",
     venue: "6th International Conference on Smart City Innovation 2026",
-    doi: ""
+    doi: "https://doi.org/10.1088/1755-1315/1648/1/012008"
   },
 
   {
